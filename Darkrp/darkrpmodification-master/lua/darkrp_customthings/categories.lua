@@ -21,3 +21,10 @@ DarkRP.createCategory{
 Add new categories under the next line!
 ---------------------------------------------------------------------------]]
 
+DarkRP.createCategory{
+	name = "Soviet Army",
+	categorises = "jobs",
+	startExpanded = true,
+	color = Color(0, 107, 0, 255),
+	canSee = function(ply) return true end,
+	sortOrder = 100,
