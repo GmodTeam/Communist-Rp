@@ -31,11 +31,11 @@ TEAM_CITIZEN = DarkRP.createJob("Citizen", {
     category = "Citizens",
 })
 
-TEAM_GPOFFICER = DarkRP.createJob("Spetsnaz", {
+TEAM_SPETSNAZ = DarkRP.createJob("Spetsnaz", {
     color = Color(119, 21, 21, 255),
     model = {"models/half-dead/modern spetsnaz/male_02.mdl", "models/half-dead/modern spetsnaz/male_01.mdl", "models/half-dead/modern spetsnaz/male_10.mdl"},
     description = [[Special forces of the Red Army.]],
-    weapons = {"tfa_ak74", "tfa_mp9, "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker"q},
+    weapons = {"tfa_ak74", "tfa_mp9", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker"},
     command = "spetsnaz",
     max = 6,
     salary = 130,
@@ -47,6 +47,70 @@ TEAM_GPOFFICER = DarkRP.createJob("Spetsnaz", {
 	PlayerSpawn = function(ply) ply:SetHealth(150) ply:SetMaxHealth(150) ply:SetArmor(50)  end,
 })
 
+TEAM_SOVIETARMY = DarkRP.createJob("Soviet Infantry", {
+    color = Color(119, 21, 21, 255),
+    model = {"models/blackops/humans/rus/rus_wint_hardline.mdl", "models/blackops/humans/rus/rus_wint_lightweight.mdl"},
+    description = [[Infantry of the Red Army.]],
+    weapons = {"tfa_ak74", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker"},
+    command = "sainfantry",
+    max = 10,
+    salary = 120,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Soviet Army",
+	PlayerSpawn = function(ply) ply:SetHealth(150) ply:SetMaxHealth(150) ply:SetArmor(25)  end,
+})
+
+
+TEAM_SOVIETARMY = DarkRP.createJob("Soviet Marksman", {
+    color = Color(119, 21, 21, 255),
+    model = {"models/blackops/humans/rus/rus_wint_ghost.mdl"},
+    description = [[Marksman of the Red Army.]],
+    weapons = {"tfa_mp9", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker", "tfa_intervention"},
+    command = "samarksman",
+    max = 5,
+    salary = 120,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Soviet Army",
+	PlayerSpawn = function(ply) ply:SetHealth(125) ply:SetMaxHealth(135) ply:SetArmor(25)  end,
+})
+
+TEAM_SOVIETARMY = DarkRP.createJob("Soviet Support", {
+    color = Color(119, 21, 21, 255),
+    model = {"models/blackops/humans/rus/rus_wint_flakjacket.mdl"},
+    description = [[Support of the Red Army.]],
+    weapons = {"tfa_mp9", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker", "tfa_m249lmg"},
+    command = "sasupport",
+    max = 5,
+    salary = 120,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Soviet Army",
+	PlayerSpawn = function(ply) ply:SetHealth(160) ply:SetMaxHealth(160) ply:SetArmor(50)  end,
+})
+
+TEAM_SOVIETARMY = DarkRP.createJob("Soviet Officer", {
+    color = Color(119, 21, 21, 255),
+    model = {"models/blackops/humans/rus/rus_wint_flakjacket.mdl"},
+    description = [[Officer of the Red Army.]],
+    weapons = {"tfa_mp9", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker", "tfa_ak74"},
+    command = "saofficer",
+    max = 3,
+    salary = 140,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Soviet Army",
+	PlayerSpawn = function(ply) ply:SetHealth(150) ply:SetMaxHealth(150) ply:SetArmor(50)  end,
+})
 --[[---------------------------------------------------------------------------
 Define which team joining players spawn into and what team you change to if demoted
 ---------------------------------------------------------------------------]]
