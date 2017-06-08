@@ -28,3 +28,11 @@ DarkRP.createCategory{
 	color = Color(255, 62, 0, 255),
 	canSee = function(ply) return true end,
 	sortOrder = 100,
+
+DarkRP.createCategory{
+	name = "Citizens",
+	categorises = "jobs",
+	startExpanded = true,
+	color = Color(77, 255, 0, 255),
+	canSee = function(ply) return true end,
+	sortOrder = 100,
