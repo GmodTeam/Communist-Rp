@@ -112,10 +112,10 @@ TEAM_SOVIETARMY = DarkRP.createJob("Soviet Officer", {
 	PlayerSpawn = function(ply) ply:SetHealth(150) ply:SetMaxHealth(150) ply:SetArmor(50)  end,
 })
 
-TEAM_SOVIETARMY = DarkRP.createJob("Soviet Governor", {
-    color = Color(119, 21, 21, 255),
+TEAM_SOVIETOFFICAL = DarkRP.createJob("Soviet Governor", {
+    color = Color(130, 21, 21, 255),
     model = {"models/joshers/badasses/playermodels/odessa.mdl"},
-    description = [[Officer of the Red Army.]],
+    description = [[Governor of the USSR.]],
     weapons = {"tfa_mp9", "arrest_stick", "unarrest_stick", "weapon_fists"},
     command = "sogovernor",
     max = 1,
@@ -128,6 +128,37 @@ TEAM_SOVIETARMY = DarkRP.createJob("Soviet Governor", {
 	PlayerSpawn = function(ply) ply:SetHealth(125) ply:SetMaxHealth(125) ply:SetArmor(50)  end,
 })
 
+TEAM_SOVIETOFFICAL = DarkRP.createJob("Soviet Secretary", {
+    color = Color(130, 21, 21, 255),
+    model = {"models/player/female_02_suit.mdl"},
+    description = [[Secretary of the USSR.]],
+    weapons = {"tfa_mp9", "stunstick", "weapon_fists"},
+    command = "sosecretary",
+    max = 3,
+    salary = 120,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Soviet Offical",
+	PlayerSpawn = function(ply) ply:SetHealth(100) ply:SetMaxHealth(100) ply:SetArmor(50)  end,
+})
+
+TEAM_SOVIETOFFICAL = DarkRP.createJob("Soviet Politican", {
+    color = Color(130, 21, 21, 255),
+    model = {"models/taggart/gallahan.mdl", "models/humans/suitfem/female_02.mdl"},
+    description = [[Politican of the USSR.]],
+    weapons = {"tfa_mp9", "stunstick", "weapon_fists"},
+    command = "sopolitican",
+    max = 4,
+    salary = 125,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Soviet Offical",
+	PlayerSpawn = function(ply) ply:SetHealth(100) ply:SetMaxHealth(100) ply:SetArmor(50)  end,
+})
 --[[---------------------------------------------------------------------------
 Define which team joining players spawn into and what team you change to if demoted
 ---------------------------------------------------------------------------]]
