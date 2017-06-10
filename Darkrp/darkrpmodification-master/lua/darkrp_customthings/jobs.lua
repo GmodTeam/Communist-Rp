@@ -35,7 +35,7 @@ TEAM_SPETSNAZ = DarkRP.createJob("Spetsnaz", {
     color = Color(119, 21, 21, 255),
     model = {"models/half-dead/modern spetsnaz/male_02.mdl", "models/half-dead/modern spetsnaz/male_01.mdl", "models/half-dead/modern spetsnaz/male_10.mdl"},
     description = [[Special forces of the Red Army.]],
-    weapons = {"tfa_ak74", "tfa_mp9", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker", "weapon_fists"},
+    weapons = {"tfa_ak74", "tfa_mp9", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker", "weapon_fists", "csgo_daggers_webs"},
     command = "spetsnaz",
     max = 6,
     salary = 130,
@@ -51,7 +51,7 @@ TEAM_SOVIETARMY = DarkRP.createJob("Soviet Infantry", {
     color = Color(119, 21, 21, 255),
     model = {"models/blackops/humans/rus/rus_wint_hardline.mdl", "models/blackops/humans/rus/rus_wint_lightweight.mdl"},
     description = [[Infantry of the Red Army.]],
-    weapons = {"tfa_ak74", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker", "weapon_fists"},
+    weapons = {"tfa_ak74", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker", "weapon_fists", "weapon_csgo_knife"},
     command = "sainfantry",
     max = 10,
     salary = 120,
@@ -68,7 +68,7 @@ TEAM_SOVIETARMY = DarkRP.createJob("Soviet Marksman", {
     color = Color(119, 21, 21, 255),
     model = {"models/blackops/humans/rus/rus_wint_ghost.mdl"},
     description = [[Marksman of the Red Army.]],
-    weapons = {"tfa_mp9", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker", "tfa_intervention", "weapon_fists"},
+    weapons = {"tfa_mp9", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker", "tfa_intervention", "weapon_fists", "weapon_csgo_knife"},
     command = "samarksman",
     max = 5,
     salary = 120,
@@ -84,7 +84,7 @@ TEAM_SOVIETARMY = DarkRP.createJob("Soviet Support", {
     color = Color(119, 21, 21, 255),
     model = {"models/blackops/humans/rus/rus_wint_flakjacket.mdl"},
     description = [[Support of the Red Army.]],
-    weapons = {"tfa_mp9", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker", "tfa_m249lmg", "weapon_fists"},
+    weapons = {"tfa_mp9", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker", "tfa_m249lmg", "weapon_fists", "weapon_csgo_knife"},
     command = "sasupport",
     max = 5,
     salary = 120,
@@ -100,7 +100,7 @@ TEAM_SOVIETARMY = DarkRP.createJob("Soviet Officer", {
     color = Color(119, 21, 21, 255),
     model = {"models/blackops/humans/rus/rus_wint_flakjacket.mdl"},
     description = [[Officer of the Red Army.]],
-    weapons = {"tfa_mp9", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker", "tfa_ak74", "weapon_fists"},
+    weapons = {"tfa_mp9", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker", "tfa_ak74", "weapon_fists", "csgo_karambit_crimsonwebs"},
     command = "saofficer",
     max = 3,
     salary = 140,
@@ -158,6 +158,73 @@ TEAM_SOVIETOFFICAL = DarkRP.createJob("Soviet Politican", {
     candemote = false,
     category = "Soviet Offical",
 	PlayerSpawn = function(ply) ply:SetHealth(100) ply:SetMaxHealth(100) ply:SetArmor(50)  end,
+})
+
+TEAM_KGB = DarkRP.createJob("KGB Off-Field", {
+    color = Color(119, 21, 21, 255),
+    model = {"models/makarov/makarovsman5.mdl-dead/modern spetsnaz/male_10.mdl"},
+    description = [[KGB of the Red Army.]],
+    weapons = {"tfa_ak74", "arrest_stick", "stunstick", "unarrest_stick", "weaponchecker", "weapon_fists", "csgo_daggers_webs"},
+    command = "kgbofffield",
+    max = 5,
+    salary = 140,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Soviet Army",
+	PlayerSpawn = function(ply) ply:SetHealth(140) ply:SetMaxHealth(140) ply:SetArmor(50)  end,
+})
+
+TEAM_KGB = DarkRP.createJob("KGB On-Field", {
+    color = Color(21, 21, 119, 255),
+    model = {"models/makarov/dominik.mdl", "models/makarov/makarov.mdl"},
+    description = [[Undercover KGB agent, known for getting into resistance pockets and getting intel.]],
+    weapons = {"tfa_ak74", "unarrest_stick", "weaponchecker", "weapon_fists", "csgo_bowie_night", "weapon_csgo_fn"},
+    command = "kgbonfield",
+    max = 5,
+    salary = 140,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Soviet Army",
+	PlayerSpawn = function(ply) ply:SetHealth(100) ply:SetMaxHealth(130) ply:SetArmor(50)  end,
+		
+})
+
+TEAM_RESISTANCE = DarkRP.createJob("Resistance Fighter", {
+    color = Color(21, 21, 119, 255),
+    model = {"models/makarov/dominik.mdl", "models/makarov/makarov.mdl"},
+    description = [[Resistance is known for fighting back against the USSR.]],
+    weapons = {"weapon_fists", "weapon_csgo_fn", "csgo_bowie_night"},
+    command = "resistancefighter",
+    max = 10,
+    salary = 140,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Resistance",
+	PlayerSpawn = function(ply) ply:SetHealth(100) ply:SetMaxHealth(130) ply:SetArmor(20)  end,
+		
+})
+
+TEAM_RESISTANCE = DarkRP.createJob("American", {
+    color = Color(21, 21, 119, 255),
+    model = {"models/ninja/mw2_ruskie_arctic.mdl"},
+    description = [[Americans in Russia are known for helping the resistance fight against the USSR and aswell get intel.]],
+    weapons = {"weapon_fists", "weapon_csgo_fn", "csgo_bowie_night"},
+    command = "american",
+    max = 10,
+    salary = 140,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Resistance",
+	PlayerSpawn = function(ply) ply:SetHealth(100) ply:SetMaxHealth(130) ply:SetArmor(20)  end,
+
 })
 --[[---------------------------------------------------------------------------
 Define which team joining players spawn into and what team you change to if demoted
