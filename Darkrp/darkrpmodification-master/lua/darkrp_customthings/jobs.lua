@@ -31,6 +31,52 @@ TEAM_CITIZEN = DarkRP.createJob("Citizen", {
     category = "Citizens",
 })
 
+TEAM_CITIZEN = DarkRP.createJob("Doctor", {
+    color = Color(20, 150, 20, 255),
+    model = {"models/player/kleiner.mdl"},
+    description = [[The Doctor is in charge of healing people around, whether it be a common cold or maybe even a severed leg.]],
+    weapons = {"weapon_fists", "med_kit"},
+    command = "doctor",
+    max = 5,
+    salary = 80,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Citizens",	
+})
+
+TEAM_MOB = DarkRP.createJob("Mob boss", {
+    color = Color(25, 25, 25, 255),
+    model = "models/player/gman_high.mdl",
+    description = [[The Mob boss is the boss of the criminals in the city.
+        With his power he coordinates the mafia and forms an efficient crime organization.
+        He has the ability to break into houses by using a lockpick.
+        The Mob boss posesses the ability to unarrest you.]],
+    weapons = {"lockpick", "unarrest_stick", "weapon_fists"},
+    command = "mobboss",
+    max = 1,
+    salary = 80,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    category = "Mafia"
+})
+
+TEAM_MOB = DarkRP.createJob("Mobster", {
+    color = Color(25, 25, 25, 255),
+    model = "models/player/gman_high.mdl",
+    description = [[The Mobster works for the Mob boss, and commits the everyday crime, whether it be murder, to even robbing a bank.]],
+    weapons = {"lockpick", "weapon_fists"},
+    command = "mobster",
+    max = 5,
+    salary = 50,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    category = "Mafia"
+})	
+		
 TEAM_SPETSNAZ = DarkRP.createJob("Spetsnaz", {
     color = Color(119, 21, 21, 255),
     model = {"models/half-dead/modern spetsnaz/male_02.mdl", "models/half-dead/modern spetsnaz/male_01.mdl", "models/half-dead/modern spetsnaz/male_10.mdl"},
@@ -62,7 +108,6 @@ TEAM_SOVIETARMY = DarkRP.createJob("Soviet Infantry", {
     category = "Soviet Army",
 	PlayerSpawn = function(ply) ply:SetHealth(150) ply:SetMaxHealth(150) ply:SetArmor(25)  end,
 })
-
 
 TEAM_SOVIETARMY = DarkRP.createJob("Soviet Marksman", {
     color = Color(119, 21, 21, 255),
